@@ -1,0 +1,20 @@
+#
+# This file is parsed by pam_env module
+#
+# Syntax: simple "KEY=VAL" pairs on separate lines
+#
+#
+QT_QPA_PLATFORMTHEME=qt5ct
+QT_STYLE_OVERRIDE=kvantum
+EDITOR=nvim
+BROWSER=firefox
+
+PATH="/home/kory/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/kory/appimage"
+
+GTK_IM_MODULE=wayland
+QT_IM_MODULE=fcitx
+QT_IM_MODULES="wayland;fcitx;ibus"
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
+INPUT_METHOD=fcitx
+GLFW_IM_MODULE=ibus

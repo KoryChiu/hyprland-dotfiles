@@ -1,0 +1,85 @@
+/* SwayNC 全域設定 
+*/
+* {
+    /* 這裡指定字體順序：英文先，中文後 */
+    font-family: "JetBrainsMono Nerd Font", "Noto Sans CJK TC", "Microsoft JhengHei", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+/* 通知視窗主體 */
+.notification {
+    background: rgba(30, 30, 46, 0.8); /* 預設 80% 透明度 */
+    border-radius: 12px;
+    margin: 8px;
+    transition: all 0.2s ease; /* 增加過渡動畫，變色更平滑 */
+}
+
+/* 關鍵修正：當滑鼠移入整個通知區域時，整體變色 */
+.notification:hover {
+    background: rgb(69, 71, 90); /* 變為完全不透明的灰色 (Catppuccin Surface1) */
+    /* 如果您希望背景完全不透明，請確保使用 rgb() 而不是 rgba() */
+}
+
+/* 滑鼠移入時，文字稍微加亮 */
+.notification:hover .summary {
+    color: #f5e0dc; /* 亮色 */
+}
+
+.notification:hover .body {
+    color: #ffffff;
+}
+
+/* 確保內部的內容不要自己帶背景，否則會切成一塊一塊的 */
+.notification-content {
+    background: transparent;
+    padding: 10px;
+}
+
+/* 通知標題 (通常是 App 名稱或發送者) */
+.notification-content .summary {
+    color: #cba6f7; /* 淡紫色 */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* 通知內文 (這是中英文最常出現的地方) */
+.notification-content .body {
+    color: #cdd6f4; /* 淺灰色 */
+    line-height: 1.5; /* 增加行高讓中文更易讀 */
+}
+
+/* 側邊通知中心面板 */
+.control-center {
+    background: rgba(24, 24, 37, 0.95);
+    border-radius: 15px;
+    border: 1px solid #313244;
+    padding: 10px;
+}
+
+/* 勿擾模式按鈕 */
+.control-center-button-all {
+    background: #313244;
+    border-radius: 8px;
+    color: #cdd6f4;
+}
+
+.control-center-button-all:hover {
+    background: #45475a;
+}
+
+.widget-title {
+    color: #cba6f7;
+    background: rgba(49, 50, 68, 0.5);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.widget-title > button {
+    font-family: "JetBrainsMono Nerd Font", "Noto Sans CJK TC";
+    background: #f38ba8;
+    color: #11111b;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
