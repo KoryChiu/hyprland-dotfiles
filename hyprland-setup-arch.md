@@ -124,6 +124,25 @@ cd /tmp/
 git clone -b main --depth=1 https://github.com/uiriansan/SilentSDDM && cd SilentSDDM && ./install.sh
 ```
 
+# 還原自己的 dotfile
+
+若不放心，請先備份
+
+```
+cd ~/Downloads
+git clone https://github.com/KoryChiu/hyprland-dotfiles.git
+cd hyprland-dotfiles/dotfiles/.config
+cp -f fish/config.fish ~/.config/fish/
+cp -f fuzzel/fuzzel.ini ~/.config/fuzzel/
+cp -rf hypr ~/.config/
+cp -rf kitty ~/.config/
+cp -rf swaylock ~/.config/
+cp -rf waybar ~/.config/
+cp -rf wlogout ~/.config/
+```
+
+reboot
+
 # CATO VPN
 
 https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=cato-client-bin
